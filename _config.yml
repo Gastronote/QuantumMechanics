@@ -1,18 +1,22 @@
+# 網站基本資訊
 title: Quantum Mechanics
 description: Gastronote 的量子力學筆記
-theme: just-the-docs
-
 url: https://gastronote.github.io/QuantumMechanics
 
-# 啟用數學公式支援
-aux_links:
-  "Gastronote 主站":
-    - "https://gastronote.github.io"
+# --- 關鍵修正：使用 remote_theme ---
+remote_theme: just-the-docs/just-the-docs
 
-# 讓數學公式生效的設定
+# --- 關鍵修正：啟用 remote_theme 外掛 ---
+plugins:
+  - jekyll-remote-theme
+
+# 啟用數學公式 (MathJax)
+head_content: |
+  <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+# 啟用搜尋功能
 search:
   enabled: true
 
-# 這一行是為了讓 MathJax 運作
-head_content: |
-  <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+# 讓數學公式也能被搜尋到 (選用)
+search_tokenizer_separator: /[\s/]+/
