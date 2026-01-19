@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  <head>
+    {% include head.html %}
+
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$'], ['\\(','\\)']],
+          displayMath: [['$$','$$'], ['\\[','\\]']],
+          processEscapes: true
+        }
+      });
+    </script>
+  </head>
+
+  <body>
+
+    {% include header.html %}
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        
+        <div class="two-columns-container">
+
+          <aside class="layout-left">
+            
+            <div class="sidebar-title">
+              <a href="https://gastronote.github.io/">
+                <span class="arrow">←</span> Back to G-astronote
+              </a>
+            </div>
+
+            <div class="sidebar-title">
+              <a href="{{ "/" | relative_url }}">
+                Quantum Mechanics
+              </a>
+            </div>
+
+            <nav class="sidebar-toc">
+              
+              <details {% if page.chapter == 'Modern Physics' %}open{% endif %}>
+                <summary>Modern Physics Experiment - What is "Quantum"?</summary>
+                <ul>
+                  <li><a href="#">Blackbody Radiation</a></li>
+                  <li><a href="#">Photoelectric Effect</a></li>
+                  <li><a href="#">Compton Effect</a></li>
+                  <li><a href="#">Electron Diffraction and Wave Particle Duality</a></li>
+                  <li><a href="#">Copenhagen Interpretation</a></li>
+                  <li><a href="#">Bohr Atom</a></li>
+                  <li><a href="#">Uncertainty Principle</a></li>
+                </ul>
+              </details>
+
+              <details {% if page.chapter == 'Schrödinger Equation' %}open{% endif %}>
+                <summary>Schrödinger Equation</summary>
+                <ul>
+                  <li><a href="{{ site.baseurl }}{% link _notes/2-1_Schrodinger_Equation.md %}">Time-Independent Schrödinger Equation</a></li>
+                  <li><a href="{{ site.baseurl }}{% link _notes/2-2_Probability_Interpretation.md %}">Probability Interpretation</a></li>
+                  <li><a href="#">Expectation Values and Momentum Space</a></li>
+                  
+                  <details close>
+                    <summary>Different Potentials Problem</summary>
+                    <ul>
+                      <li><a href="#">Free Particle in the box</a></li>
+                      <li><a href="#">Potential Step</a></li>
+                      <li><a href="#">Potential Well</a></li>
+                      <li><a href="#">Potential Barrier</a></li>
+                      <li><a href="#">Delta Function Potential</a></li>
+                      <li><a href="#">Harmonic Oscillator</a></li>
+                    </ul>
+                  </details>
+              </details>
+
+              <details close>
+                <summary>Dirac Notation and Hilbert Space</summary>
+                <ul>
+
+                </ul>
+              </details>
+
+              <details close>
+                <summary>Angular Momentum</summary>
+                <ul>
+
+                </ul>
+              </details>
+
+              <details close>
+                <summary>Quantum Dynamics</summary>
+                <ul>
+
+                </ul>
+              </details>
+
+              <details close>
+                <summary>Symmetry and Conservation Law</summary>
+                <ul>
+
+                </ul>
+              </details>
+
+              <details close>
+                <summary>Perturbation Theory</summary>
+                <ul>
+
+                </ul>
+              </details>
+
+              <details close>
+                <summary>Scattering Theory</summary>
+                <ul>
+
+                </ul>
+              </details>
+
+              <details close>
+                <summary>Relativistic Quantum Mechanics and Quantum Field Theory</summary>
+                <ul>
+                  <li><a href="#">Blackbody Radiation</a></li>
+                  <li><a href="#">Photoelectric Effect</a></li>
+                  <li><a href="#">Compton Effect</a></li>
+                  <li><a href="#">Electron Diffraction and Wave Particle Duality</a></li>
+                  <li><a href="#">Copenhagen Interpretation</a></li>
+                  <li><a href="#">Bohr Atom</a></li>
+                  <li><a href="#">Uncertainty Principle</a></li>
+                </ul>
+              </details>
+
+            </nav>
+
+          </aside>
+
+          <div class="layout-main">
+            {{ content }}
+          </div>
+
+        </div>
+        </div>
+    </main>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

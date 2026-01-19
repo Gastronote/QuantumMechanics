@@ -1,21 +1,15 @@
 ---
-layout: home
-title: Home
-nav_order: 1
+layout: default
+title: Quantum Mechanics Overview
 ---
 
 # Quantum Mechanics
-{: .fs-9 }
+{: .no_toc }
 
-這是一份關於量子力學的自編講義。
-{: .fs-6 .fw-300 }
-
-[View on GitHub](https://github.com/Gastronote/QuantumMechanics){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
-
----
+Welcome to the Quantum Mechanics section. Below is the learning path and notes.
 
 ## Contents
-### Mordern Physics Experiment - What is "Quantum"?
+### Modern Physics Experiment - What is "Quantum"?
 - Blackbody Radiation
 - Photoelectric Effect
 - Compton Effect
@@ -25,37 +19,40 @@ nav_order: 1
 - Uncertainty Principle
 
 ### Schrödinger Equation
-- Schrödinger Equation
-- Probability Interpretation
+- [Schrödinger Equation]({{ site.baseurl }}{% link _notes/2-1_Schrodinger_Equation.md %})
+- [Probability Interpretation]({{ site.baseurl }}{% link _notes/2-2_Probability_Interpretation.md %})
 - Expectation Values and Momentum Space
-- A Particle in a Box and Free Particle
-- One-Dimensional Potentials Problem - Potential Step
-- One-Dimensional Potentials Problem - Potential Well
-- One-Dimensional Potentials Problem - Potential Barrier
-- One-Dimensional Potentials Problem - Delta Function Potential
-- One-Dimensional Potentials Problem - Harmonic Oscillator
+
+### Different Potentials Problem
+- Free Particle in the box
+- Potential Step
+- Potential Well
+- Potential Barrier
+- Delta Function Potential
+- Harmonic Oscillator
 
 ### Dirac Notation and Hilbert Space
 - 
 
 ### Angular Momentum
--
+- 
 
 ### Quantum Dynamics
--
+- 
 
 ### Symmetry and Conservation Law
--
+- 
 
 ### Perturbation Theory
--
+- 
 
 ### Scattering Theory
--
+- 
 
-<!-- ### Relativistic Quantum Mechanics and Quantum Field Theory
-- Klein-Gordon Equation -->
+### Relativistic Quantum Mechanics and Quantum Field Theory
+- 
 
+---
 ## Reference
 - D. J. Griffiths, D. F. Schroeter. (2018). Introduction to Quantum Mechanics, Third Edition. Cambridge University Press.
 - S. Gasiorowicz. (2003). Quantum Physics, Third Edition. Wiley.

@@ -1,0 +1,127 @@
+---
+# 這一區塊一定要留著，Jekyll 才會編譯它
+---
+
+@import "minima";
+
+/* --- 以下是我們的三欄式 CSS --- */
+
+/* 電腦版 (寬度大於 1000px 時)：啟動網格佈局 */
+@media (min-width: 1500px) {
+  .two-columns-container {
+    display: grid;
+    /* 這裡改成只有兩個值：左欄 250px | 右欄 自動填滿剩下空間 */
+    grid-template-columns: 500px 1fr; 
+    gap: 40px;
+    align-items: start;
+  }
+
+  /* 因為少了一欄，可以稍微縮小總寬度，或者保持寬螢幕讓內容更寬 */
+  .wrapper {
+    max-width: 90% !important; /* 讓內容盡量滿版，適合閱讀長公式 */
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* 讓左側選單凍結 (Sticky) - 這是閱讀筆記很好用的功能 */
+  .layout-left {
+    /* 讓側邊欄固定 (Sticky) */
+    position: sticky;
+    top: 20px;
+    max-height: 95vh;
+    overflow-y: auto; /* 內容太長時可以捲動 */
+    padding-right: 10px;
+  }
+
+  /* 1. 大標題樣式 (Back... & QM) */
+  .sidebar-title {
+    margin-bottom: 15px;
+  }
+
+  .sidebar-title a {
+    display: block;
+    font-size: 1.2rem;       /* 字體加大 */
+    font-weight: bold;       /* 粗體 */
+    text-decoration: underline; /* 底線 */
+    color: #000;             /* 純黑字體 */
+    line-height: 1.4;
+  }
+
+  .sidebar-title .arrow {
+    margin-right: 5px;       /* 箭頭跟文字的距離 */
+    text-decoration: none;   /* 箭頭不要有底線 */
+    display: inline-block;
+  }
+
+  /* 2. 目錄分類標題 (Modern Physics...) */
+  .toc-category {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #555;
+    text-transform: uppercase; /* 選用：把英文變全大寫，看起來比較像標題 */
+    letter-spacing: 0.5px;
+    padding-left: 10px; /* 稍微縮排跟大標題區隔 */
+  }
+
+  /* 3. 強制縮排的筆記列表 */
+  .sidebar-toc ul {
+    list-style: none;             /* 去掉黑點 */
+    padding-left: 0 !important;   /* 清除預設內距 */
+    margin-left: 35px !important; /* 🔥 強制往右推 40px */
+    margin-top: 5px;
+    border-left: 2px solid #eee;  /* 左邊灰線 */
+  }
+
+  .sidebar-toc li {
+    margin-bottom: 8px;
+    padding-left: 10px;           /* 讓文字跟灰線保持一點距離 */
+  }
+
+    .sidebar-toc a {
+      font-size: 0.9rem; /* 連結字體稍微小一點，比較精緻 */
+      color: #666;
+      text-decoration: none;
+      display: block;
+      padding: 2px 0;
+      transition: color 0.2s;
+    }
+
+  .sidebar-toc a:hover {
+    color: #2a7ae2; /* 滑鼠移過去變藍色 */
+  }
+}
+
+/* 手機版 (寬度小於 999px 時)：垂直堆疊 */
+@media (max-width: 1499px) {
+  .two-columns-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* 讓手機版時，主內容(文章)先顯示，導覽列跟資訊欄被擠到下面 */
+  .layout-main { order: 1; }
+  .layout-left { 
+    order: 2; 
+    margin-top: 30px; 
+    padding-top: 20px;
+    border-top: 1px solid #e8e8e8;
+  }
+}
+
+/* 讓側邊欄稍微美化一下 */
+.layout-left, .layout-right {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.layout-left ul {
+  list-style: none; /* 去掉圓點 */
+  padding-left: 0;
+}
+
+.layout-left li {
+  margin-bottom: 10px;
+}
